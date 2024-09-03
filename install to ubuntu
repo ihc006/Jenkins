@@ -30,15 +30,15 @@ http://localhost:8080
 
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
-
+# **********************************
 ########## https://medium.com/@ranjith_99360/how-to-install-jenkins-on-ubuntu-22-04-17b99fd41678   ##########
 
 java -version
 
 sudo apt update
 
-sudo apt install openjdk-8-jdk -y
-sudo apt install openjdk-11-jdk -y
+
+sudo apt install openjdk-21-jdk -y
 
 
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
@@ -67,6 +67,7 @@ http://localhost:8080
 
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
+#******************************************
 ########## https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-22-04   ##########
 
 
