@@ -1,0 +1,18 @@
+stages:
+  - build
+  - publish
+  
+build_project:
+  stage: build
+  tags: 
+    - AppServerDev1
+  script:
+    - dotnet build src/Test.sln
+
+publish_project:
+  stage: publish
+  tags:
+    - AppServerDev1
+  script:
+    - dotnet publish src/Test.Api/Test.Api.csproj -o "publish/api"
+	
