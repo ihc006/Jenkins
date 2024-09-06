@@ -7,12 +7,19 @@ build_project:
   tags: 
     - AppServerDev1
   script:
-    - dotnet build src/Test.sln
+    - sudo dotnet build Zerreactor.sln
 
 publish_project:
   stage: publish
   tags:
     - AppServerDev1
   script:
-    - dotnet publish src/Test.Api/Test.Api.csproj -o "publish/api"
+    - sudo rm -r /var/www/old.backend -y
+    - sudo mv -r /var/www/backend /var/www/old.backend  -y 
+    - sudo  dotnet publish -0 /var/www/backend/ -c Release
+    - sudo systemctl restart backend.service
 	
+
+# dotnet 8
+# 
+# 
